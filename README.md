@@ -1,4 +1,4 @@
 # Simple-payment-App
-After clone this reop
-npm install to get all the node-modules
-npm start to run the server
+After clone this project
+1. "npm install" to download all the node-modules
+2. "npm start" to run the application
