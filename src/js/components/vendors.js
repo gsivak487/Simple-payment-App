@@ -20,7 +20,7 @@ export default class Vendors extends React.Component {
     componentDidMount() {
        
         $.ajax({
-            url: "http://localhost:3000/getvendors",
+            url: "http://localhost:3000/getTransactions",
             type: "GET",
             dataType: 'json',
             ContentType: 'application/json',
@@ -94,11 +94,11 @@ export default class Vendors extends React.Component {
                     <BootstrapTable data={this.state.vendors} options={options} ref='table'
                         trClassName={this.trClassNameFormat}
                         >
-                        <TableHeaderColumn dataField="VendorID" hidden isKey autoValue>Vendor ID</TableHeaderColumn>
-                        <TableHeaderColumn dataField="GSTIN_UIN" editable={{ type: 'textarea' }} dataFormat={(val)=>{if(val == "" || val == null){return '29ABDPJ1385P1Z4';}else{return val;} }}>Refrence No</TableHeaderColumn>
-                        <TableHeaderColumn dataField="VendorName" className='good' editable={{ type: 'textarea', validator: this.nameValidator }}>Transactions Name</TableHeaderColumn>
-                        <TableHeaderColumn dataField="VendorEmail" editable={{ type: 'textarea', validator: this.emailValidator }}>Transactions Email</TableHeaderColumn>
-                        <TableHeaderColumn dataField="Phone" editable={{ type: 'textarea', validator: this.phoneValidator }} dataFormat={this.PhoneFormatter}>Transactions Amount</TableHeaderColumn>
+                        <TableHeaderColumn dataField="TransID" hidden isKey autoValue>Vendor ID</TableHeaderColumn>
+                        <TableHeaderColumn dataField="TransDate" editable={{ type: 'textarea' }} dataFormat={(val)=>{if(val == "" || val == null){return '29ABDPJ1385P1Z4';}else{return val;} }}>Date</TableHeaderColumn>
+                        <TableHeaderColumn dataField="TransRefNumber" className='good' editable={{ type: 'textarea', validator: this.nameValidator }}>Reference Number</TableHeaderColumn>
+                        <TableHeaderColumn dataField="TransDetails" editable={{ type: 'textarea', validator: this.emailValidator }}>Transactions Details</TableHeaderColumn>
+                        <TableHeaderColumn dataField="TransAmount" editable={{ type: 'textarea', validator: this.phoneValidator }} dataFormat={this.PhoneFormatter}>Transactions Amount</TableHeaderColumn>
                     </BootstrapTable>
                 </div>
 

@@ -11,7 +11,7 @@ var config = {
        },
     devServer: {
        inline: true,
-       port: 8010
+       port: 8080
     },
     module: {
        loaders: [

@@ -58,7 +58,7 @@ export default class invoicesForUser extends React.Component {
               </div>
               <div class="widget-data">
                 <div class="widget-int num-count">50,480</div>
-                <div class="widget-title">Total money Recevied</div>
+                <div class="widget-title">Total money Received</div>
               </div>
               <div class="widget-controls">
                 <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="glyphicon glyphicon-remove"></span></a>
